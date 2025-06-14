@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    user-select: none;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    background: #f1f2f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 255, 255, 0.45);
+}
+
+.table {
+    width: 35vw;
+    height: 70vh;
+    background-color: aqua;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    box-shadow: 0 0 2px 2px rgb(0, 170, 255);
+}
+
+.table>div {
+    width: 7vw;
+    height: 17.5vh;
+    border: solid white 1px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(to right bottom, aqua, rgb(0, 170, 255));
+    text-shadow: 0 2px 5px white;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    background-size: contain;
+}
+
+.table>div:hover {
+    background: rgb(0, 170, 255);
+    transform: scale(1.08);
+    color: aqua;
+    text-shadow: none;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.table>div:active {
+    transform: scale(1.3);
+    transform-style: preserve-3d;
+}
+
+.table>div>img {
+    width: 6vw;
+    display: none;
+}
+
+.table>.first,
+.table>.sixth,
+.table>.eleventh {
+    border-bottom-left-radius: 0px;
+}
+
+
+.table>.sixth,
+.table>.eleventh,
+.table>.sixteenth {
+    border-top-left-radius: 0px;
+}
+
+.table>.fifth,
+.table>.tenth,
+.table>.fifteenth {
+    border-bottom-right-radius: 0px;
+}
+
+.table>.tenth,
+.table>.fifteenth,
+.table>.twentieth {
+    border-top-right-radius: 0px;
+}
+
+.table>.first,
+.table>.second,
+.table>.third,
+.table>.fourth {
+    border-top-right-radius: 0px;
+}
+
+.table>.second,
+.table>.third,
+.table>.fourth,
+.table>.fifth {
+    border-top-left-radius: 0px;
+}
+
+.table>.sixteenth,
+.table>.seventeenth,
+.table>.eighteenth,
+.table>.nineteenth {
+    border-bottom-right-radius: 0px;
+}
+
+.table>.seventeenth,
+.table>.eighteenth,
+.table>.nineteenth,
+.table>.twentieth {
+    border-bottom-left-radius: 0px;
+}
+
+.buttons {
+    width: 35vw;
+    margin-top: 20px;
+}
+
+
+.new-game {
+    width: 10vw;
+    height: 6vh;
+    border: solid 1px rgb(0, 170, 255);
+    background: rgb(0, 170, 255);
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    text-shadow: 0 0px 5px white;
+    border-radius: 5px;
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 0px;
+    transition: 0.4s;
+    text-align: center;
+}
+
+.new-game:hover {
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 40px;
+    transform: scale(1.05);
+}
+
+.new-game:active {
+    transform: scale(0.8);
+}
+
+.table>div.flipped {
+    transform: rotateY(180deg);
+    background: rgb(0, 170, 255);
+}
+
+
+.win-text {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 98, 255, 0.472);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 15px;
+}
+
+.win-text>h1 {
+    font-size: 100px;
+    color: red;
+    text-shadow: 0 0 10px;
+}
+
+.win-text>button {
+    width: 10vw;
+    padding: 1%;
+    border-radius: 20px;
+    border: solid white 1px;
+    color: white;
+    background-color: red;
+    font-size: 20px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.win-text>button:active {
+    scale: 0.8;
+}
+
+@media only screen and (max-width:1200px) {
+
+    .table,
+    .buttons {
+        width: 40vw;
+    }
+
+    .new-game {
+        font-size: 16px;
+    }
+
+    .table>div {
+        width: 8vw;
+    }
+}
+
+
+@media only screen and (max-width:992px) {
+
+    .table,
+    .buttons {
+        width: 50vw;
+    }
+
+    .new-game {
+        width: 15vw;
+        font-size: 16px;
+    }
+
+    .table>div {
+        width: 10vw;
+    }
+}
+
+@media only screen and (max-width:768px) {
+
+    .table,
+    .buttons {
+        width: 80vw;
+    }
+
+    .new-game {
+        width: 18vw;
+        font-size: 16px;
+    }
+
+    .table>div {
+        width: 16vw;
+    }
+}
+
+@media only screen and (max-width:528px) {
+    .table,
+    .buttons {
+        width: 85vw;
+    }
+
+    .table {
+        height: 55vh;
+    }
+
+    .new-game {
+        width: 24vw;
+        font-size: 16px;
+    }
+
+    .table>div {
+        width: 17vw;
+        height: 13.75vh;
+    }
+}

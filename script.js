@@ -7,7 +7,7 @@ const openCardText = [];
 function game() {
     const imgsArray = ['apple.webp', 'apple.webp',
         'apricot.webp', 'apricot.webp',
-        'Banana.webp', 'Banana.webp',
+        'banana.webp', 'banana.webp',
         'cherry.webp', 'cherry.webp',
         'grapes.webp', 'grapes.webp',
         'mango.webp', 'mango.webp',
